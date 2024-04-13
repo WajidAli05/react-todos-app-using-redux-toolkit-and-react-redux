@@ -1,3 +1,9 @@
+1. create app
+2. install tailwind css
+3. configure tailwind.config.js file
+4. Add to index.css
+5. install tailwind css intellisense extension
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
