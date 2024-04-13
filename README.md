@@ -1,76 +1,49 @@
-1. create app
-2. install tailwind css
-3. configure tailwind.config.js file
-4. Add to index.css
-5. install tailwind css intellisense extension
+#Complete Step by Step Guide
 
-# Getting Started with Create React App
+##Author: Wajid Ali
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Create React App
+1. npx create-react-app redux-todos-app
+**NOTE: Replace "redux-todos-app" with the name of the application according to your preference**
 
-## Available Scripts
+2. cd redux-todos-app
 
-In the project directory, you can run:
+##[Install Tailwind CSS for Quick Styling](https://tailwindcss.com/docs/installation)
+1. npm install -D tailwindcss
+2. npx tailwindcss init
 
-### `npm start`
+It will create **tailwind.config.js** file in the root of the project. Open this file and the following line to **contents**:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+"./src/**/*.{html,js}"
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+###Configure index.css file
+Add the following lines to your **index.css** file:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+###Install **tailwind css intellisense** extention from extensions tab in VS code
+This extension will help you in selecting tailwind css classes directly by typing in VS code as it provides suggestions of the Tailwind css classes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Now you are ready to use Tailwind css in your project!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##Redux
+###Create slices
+1. Inside **src** folder, create a new folder named **slices**.
+2. Create a new file named **todosSlice.js** in **slices** folder.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+###Create redux store
+1. Inside the **src** folder create a new folder named **store**.
+2. Create a new file named **store.js** inside **store** folder
+3. Register the slices created in the store
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###Connect React application to the Redux store
+1. Import **Provider** from **react-redux** inside **index.js** file
+2. Import **store** inside **index.js** file
+3. Wrap **App** component with **Provider** and add **store = {store}** as a parameter to the **Provider**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*Congrates! You have created your first React application using Redux Toolkit and React Redux
