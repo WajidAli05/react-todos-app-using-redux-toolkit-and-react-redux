@@ -4,6 +4,7 @@
 
 ## Create React App
 1. npx create-react-app redux-todos-app
+
 **NOTE: Replace "redux-todos-app" with the name of the application according to your preference**
 
 2. cd redux-todos-app
